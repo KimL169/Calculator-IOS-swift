@@ -33,12 +33,12 @@ class ViewController: UIViewController {
     @IBAction func enter() {
         userIsInTheMiddleOfTypingANumber = false
         operandStack.append(displayValue)
-        print("operandStack = \(displayValue)")
+        print("\(operandStack)")
     }
     
     var displayValue: Double {
         get {
-            NSNumberFormatter().numberFromString(display.text!)!.doubleValue
+            return NSNumberFormatter().numberFromString(display.text!)!.doubleValue
         }
         set {
             //someone sets the 'displayvalue' we set the display text'
@@ -46,6 +46,30 @@ class ViewController: UIViewController {
             userIsInTheMiddleOfTypingANumber = false
         }
     }
+    
+    @IBAction func operate(sender: UIButton) {
+        let operation = sender.currentTitle!
+        if userIsInTheMiddleOfTypingANumber {
+            enter()
+        }
+        
+        if operandStack.count >= 2{
+            switch operation {
+                case "x":
+                        displayValue = operandStack.removeLast() * operandStack.removeLast()
+    //            break
+    //            case "+":
+    //            break
+    //            case "-":
+    //            break
+    //            case "/":
+    //            break
+                default :
+                break;
+            }
+        }
+    }
+    
     
 }
 
