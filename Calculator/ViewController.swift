@@ -10,16 +10,42 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    //implicitly unwrapped optional.
+    @IBOutlet weak var display: UILabel!
+    
+    var userIsInTheMiddleOfTypingANumber: Bool = false;
+
+    @IBAction func appendDigit(sender: UIButton) {
+        
+        let digit:String = sender.currentTitle!;
+        if userIsInTheMiddleOfTypingANumber {
+            display.text = display.text! + digit
+        } else {
+            display.text = digit
+            userIsInTheMiddleOfTypingANumber = true;
+        }
+        // String?  means the type is optional and the optional can be set to String
+        // it is not a string that can be nil. nil means an optional that has not been set.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    var operandStack = Array<Double>()
+    
+    @IBAction func enter() {
+        userIsInTheMiddleOfTypingANumber = false
+        operandStack.append(displayValue)
+        print("operandStack = \(displayValue)")
     }
-
-
+    
+    var displayValue: Double {
+        get {
+            NSNumberFormatter().numberFromString(display.text!)!.doubleValue
+        }
+        set {
+            //someone sets the 'displayvalue' we set the display text'
+            display.text = "\(newValue)"
+            userIsInTheMiddleOfTypingANumber = false
+        }
+    }
+    
 }
 
