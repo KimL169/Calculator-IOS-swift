@@ -13,6 +13,7 @@
 		3B0176541C85E5A5007A1051 /* Calculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B0176521C85E5A5007A1051 /* Calculator.xcdatamodeld */; };
 		3B0176561C85E5A5007A1051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B0176551C85E5A5007A1051 /* Assets.xcassets */; };
 		3B0176591C85E5A5007A1051 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0176571C85E5A5007A1051 /* LaunchScreen.storyboard */; };
+		3B6EA2C91C8C127C00677E77 /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6EA2C81C8C127C00677E77 /* CalculatorBrain.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		3B0176551C85E5A5007A1051 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B0176581C85E5A5007A1051 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B01765A1C85E5A5007A1051 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B6EA2C71C8B08C400677E77 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		3B6EA2C81C8C127C00677E77 /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			children = (
 				3B01764B1C85E5A5007A1051 /* AppDelegate.swift */,
 				3B01764D1C85E5A5007A1051 /* ViewController.swift */,
+				3B6EA2C81C8C127C00677E77 /* CalculatorBrain.swift */,
+				3B6EA2C71C8B08C400677E77 /* MyPlayground.playground */,
 				3B01764F1C85E5A5007A1051 /* Main.storyboard */,
 				3B0176551C85E5A5007A1051 /* Assets.xcassets */,
 				3B0176571C85E5A5007A1051 /* LaunchScreen.storyboard */,
@@ -139,6 +144,7 @@
 			files = (
 				3B01764E1C85E5A5007A1051 /* ViewController.swift in Sources */,
 				3B01764C1C85E5A5007A1051 /* AppDelegate.swift in Sources */,
+				3B6EA2C91C8C127C00677E77 /* CalculatorBrain.swift in Sources */,
 				3B0176541C85E5A5007A1051 /* Calculator.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +295,7 @@
 				3B01765F1C85E5A5007A1051 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
